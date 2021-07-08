@@ -1,0 +1,85 @@
+{
+  "id": "log",
+  "name": "操作日志",
+  "title": "",
+  "version": "1.0",
+  "source": {
+    "icon": "{{pluginHost}}icon.png"
+  },
+  "category": "safe",
+  "description": "记录所有访问操作到日志",
+  "keywords": "",
+  "auther": {
+    "copyright": "aa820t",
+    "homePage": "http://www.baishoukeji.com"
+  },
+  "configItem": {
+    "formStyle":{
+      "className":"",
+      "tabs":[
+        {
+          "name":"{{LNG.Plugin.tab.basic}}",
+          "field":["pluginAuth","menuSubMenu"]
+        },
+        {
+          "name":"数据库配置",
+          "field":["dbHost","dbName","dbUsername","dbPassword","dbPort","dbCharset"]
+        }
+      ]
+    },
+    "pluginAuth": {
+      "type": "userSelect",
+      "value": "all:1",
+      "display": "{{LNG.Plugin.config.auth}}",
+      "desc": "{{LNG.Plugin.config.authDesc}}",
+      "require": 1
+    },
+    "menuSubMenu": {
+      "type": "switch",
+      "value": 1,
+      "display": "{{LNG.menu_sub_menu}}"
+    },
+    "dbHost":{
+      "type":"input",
+      "value":"127.0.0.1",
+      "display":"数据库地址",
+      "desc":"数据库地址",
+      "require":1
+    },
+    "dbName":{
+      "type":"input",
+      "value":"test",
+      "display":"数据库名",
+      "desc":"数据库名",
+      "require":1
+    },
+    "dbUsername":{
+      "type":"input",
+      "value":"root",
+      "display":"用户名",
+      "desc":"数据库用户名",
+      "require":1
+    },
+    "dbPassword":{
+      "type":"input",
+      "value":"root",
+      "display":"密码",
+      "desc":"数据库用户密码",
+      "require":1
+    },
+    "dbPort":{
+      "type":"input",
+      "value":"3306",
+      "display":"端口",
+      "desc":"数据库端口",
+      "require":1
+    },
+    "dbCharset":{
+      "type":"input",
+      "value":"utf8mb4",
+      "display":"编码",
+      "desc":"数据库编码",
+      "require":1
+    }
+  }
+}
